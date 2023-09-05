@@ -67,6 +67,7 @@ export default function Home() {
                   <thead className="border-b font-medium dark:border-neutral-500">
                     <tr>
                       <th scope="col" className="px-6 py-4">#</th>
+                      <th scope="col" className="px-6 py-4">Profile</th>
                       <th scope="col" className="px-6 py-4">Name</th>
                       <th scope="col" className="px-6 py-4">Followers</th>
                       <th scope="col" className="px-6 py-4">Following</th>
@@ -78,6 +79,9 @@ export default function Home() {
                     {data.map((userData, i) => (
                       <tr key={i} className="border-b dark:border-neutral-500">
                         <td className="whitespace-nowrap px-6 py-4 font-medium">{i + 1}</td>
+                        <td className="whitespace-nowrap px-6 py-4 font-medium">
+                          <img src={userData.avatar_url} alt="Profile" width={70} height={70} className='rounded-full' />
+                        </td>
                         <td className="whitespace-nowrap px-6 py-4">{userData.login}</td>
                         <td className="whitespace-nowrap px-6 py-4">{userData.followers}</td>
                         <td className="whitespace-nowrap px-6 py-4">{userData.following}</td>
